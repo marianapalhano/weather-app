@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+:root {
+    --light-blue: #C9DDFF;
+    --medium-blue: #2A628F;
+    --dark-blue: #16324F;
+    --yellow: #F6AE2D;
+    --orange: #F26419;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
