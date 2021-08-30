@@ -1,25 +1,24 @@
 
 const KEY = 'xwOeLNda1DJnlbWyyH4jAFYGSVGAcD1l';
-const forecastSearch = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
 const citySearch = 'http://dataservice.accuweather.com/locations/v1/cities/search';
 const currentSearch = 'http://dataservice.accuweather.com/currentconditions/v1/';
+const forecastSearch = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
 
-const getCityKey = async () => {
-    const response = await axios.get('http://dataservice.accuweather.com/locations/v1/cities/search', {
+const getCityKey = async cityName => {
+    const response = await axios.get(citySearch, {
         params: {
             apikey: KEY,
-            q: 'fortaleza'
+            q: cityName
         }
     })
-    const cityKey = await response.data[0].Key;
-    return cityKey;
+    return await response.data[0].Key;
 }
 
 const getWeather = async key => {
-    const response = await axios.get(`http://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=${KEY}`);
-    const weather = await response.data;
-    return weather;
+    const response = await axios.get(`${currentSearch}${key}?apikey=${KEY}`);
+    return await response.data;
 }
 
-getCityKey()
+getCityKey('fortaleza')
     .then( key => getWeather(key).then( weather => console.log(weather[0].WeatherText)) )
+    .catch( err => console.log(err) );
