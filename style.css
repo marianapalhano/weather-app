@@ -21,6 +21,86 @@ body, button, input, select, textarea {
     font-size: 16px;
 }
 
+body {
+    background-color: var(--light-blue);
+    height: 100vh;
+}
+
+h1 {
+    color: var(--orange);
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+h1 svg {
+    width: 32px;
+    height: 32px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+}
+
+.weather-search {
+    text-align: center;
+}
+
+.weather-search input {
+    border: 1px solid var(--dark-blue);
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin-top: 8px;
+}
+
+.weather-search label {
+    margin-bottom: 16px;
+}
+
+.weather-search button {
+    border: 1px solid var(--orange);
+    background-color: var(--orange);
+    border-radius: 8px;
+    padding: 4px 8px;
+    width: 96px;
+    color: #FFF;
+}
+
 .weather-details {
+    margin-top: 24px;
+    color: var(--medium-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-details svg {
+    color: var(--medium-blue);
+    width: 80px;
+    height: 80px;
+}
+
+.weather-details h5 {
+    text-transform: capitalize;
+    font-size: 24px;
+    margin: 16px 0;
+    padding: 0;
+}
+
+.weather-details .weather-condition span {
+    display: block;
+    text-align: center;
+}
+
+.weather-details .weather-condition span:nth-child(2) {
+    font-size: 40px;
+    color: var(--orange);
+}
+.hide {
     display: none;
 }

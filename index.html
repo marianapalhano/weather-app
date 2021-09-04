@@ -7,22 +7,23 @@
     <title>Weather Now</title>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Weather</h1>
+        <h1><i data-feather="umbrella"></i> weather app</h1>
         <form class="weather-search">
             <label for="location">Enter a location for weather information:</label>
             <input type="text" name="location">
             <button>Search</button>
         </form>
-        <div class="weather-details">
+        <div class="weather-details hide">
 
         </div>
     </div>
 
     <script src="scripts/accuweather.js"></script>
     <script src="scripts/app.js"></script>
-    <!-- <script>feather.replace()</script> -->
+    <script>feather.replace()</script>
 </body>
 </html>

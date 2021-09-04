@@ -42,16 +42,15 @@ const updateUI = (data) => {
     }
 
     details.innerHTML = `
-        <i data-feather=${icon}></i>
         <h5>${data.city}</h5>
-        <div class="weather-condition">
-            <div>
+        <i data-feather=${icon}></i>        
+        <div class="weather-condition">           
                 <span>${data.weather[0].WeatherText}</span>
-                <span>${data.weather[0].Temperature.Metric.Value}</span><span>&deg;C</span>
-            </div>
+                <span>${data.weather[0].Temperature.Metric.Value}&deg;C</span>            
         </div>
     `;
     feather.replace();
+    details.classList.remove('hide');
 }
 
 searchForm.addEventListener('submit', evt => {
