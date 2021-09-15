@@ -41,9 +41,9 @@ const updateUI = (data) => {
             icon = "cloud";
     }
 
-    details.innerHTML = `
-        <h5>${data.city}</h5>
-        <i data-feather=${icon}></i>        
+    details.innerHTML = `        
+        <i data-feather=${icon}></i>
+        <h5>${data.city}</h5>     
         <div class="weather-condition">           
                 <span>${data.weather[0].WeatherText}</span>
                 <span>${data.weather[0].Temperature.Metric.Value}&deg;C</span>            
